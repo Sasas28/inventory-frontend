@@ -53,7 +53,7 @@ export const useAuthStore = defineStore('auth', {
 
                 await this.getUser()
 
-                router.push('/dashboard')
+                
 
             } catch (error) {
                 if (!error.response) {
@@ -91,7 +91,7 @@ export const useAuthStore = defineStore('auth', {
 
                 await this.getUser()
 
-                router.push('/dashboard')
+                
 
             } catch (error) {
 
@@ -120,6 +120,8 @@ export const useAuthStore = defineStore('auth', {
                 const response = await api.get('/api/user')
 
                 this.user = response.data
+
+                router.push('/dashboard')
 
             } catch {
 

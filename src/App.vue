@@ -16,14 +16,14 @@
 <template>
     <nav class="bg-slate-900 text-white px-6 py-4 shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <RouterLink to="/" class="text-xl font-bold tracking-wide hover:text-blue-400 transition">ADEV INVENTORY APP</RouterLink>
+            <RouterLink to="/" class="text-xl font-bold tracking-wide hover:text-blue-400 transition">AVENTORY</RouterLink>
             <div class="flex items-center gap-6">
                 <template v-if="!auth.authenticated">
                     <RouterLink to="/login" class="hover:text-blue-400 transition font-medium">Login</RouterLink>
                     <RouterLink to="/register" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md transition font-medium shadow-sm">Register</RouterLink>
                 </template>
                 <template v-else>
-                  <RouterLink to="/dashboard" class="hover:text-blue-400 transition font-medium">DASHBOARD</RouterLink>
+                  <RouterLink to="/dashboard" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md transition font-medium shadow-sm">DASHBOARD</RouterLink>
                   <button @click="logout" class="hover:text-blue-400 transition font-medium" :disabled="auth.loading">{{auth.loading? 'Logging out...' : 'LOGOUT'}}</button>
                 </template>
             </div>
